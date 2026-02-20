@@ -1,36 +1,31 @@
-<div dir="rtl" align="right">
+# Bullet Deceleration Models 🎯📉
 
-### ❓ שאלה 1
-נדרש לצרף הצעה מה השיטה המומלצת אם ישנם עוד ניסויים שלא מתאימים לאותו המודל?
+A small simulation project exploring **three mathematical models** for bullet deceleration after impact.  
+The goal is to compare how different assumptions affect the velocity decrease over time/distance.
 
-✅ תשובה:  
-אם מתקבלים עוד ניסויים שמחזירים קבועים שלא מתאימים היטב לאותו מודל,  
-אני בודקת את כל המודלים על פני כל הניסויים ומשווה את היציבות של הקבועים.  
-מודל שמצליח להחזיק ערכים דומים יחסית בין ניסוי לניסוי הוא זה שמתאר טוב יותר את המציאות.  
-אם רואים שהקבועים משתנים מאוד, סימן שהמודל לא מתאים ואז צריך לחשוב על הרחבה —  
-כמו מודל משולב (לינארי + ריבועי) או התאמה סטטיסטית לפונקציה אחרת.
+Repo: https://github.com/Yamit-Moreno/Bullet-models-project
 
 ---
 
-### ❓ שאלה 2
-מה תהיה ההמלצה שלך לבחירת המודל הנכון ביותר להאטה?
+## 📌 Overview
+This project implements and compares three deceleration approaches:
+- **Constant deceleration**
+- **Linear deceleration**
+- **Quadratic deceleration**
 
-✅ תשובה:  
-ההמלצה היא לבחור במודל שנותן גם קבועים יציבים וגם תוצאה שמתיישבת עם ההיגיון הפיזיקלי.  
-במהירויות נמוכות יותר בדרך כלל ההתנהגות לינארית, ובמהירויות גבוהות ההשפעה הריבועית דומיננטית,  
-ולכן ייתכן שבפועל צריך לשלב בין המודלים.  
-המודל הנכון ביותר הוא זה שמסביר את רוב הנתונים בצורה עקבית וברורה,  
-ושומר על קבועים כמה שיותר יציבים בין ניסוי לניסוי.
+The output includes plots/analysis to help visualize differences between the models.
 
 ---
 
-### 📝 החלטות מימוש
+## 🧰 Tech
+- Python
+- Jupyter Notebook
 
+---
 
-- כל מודל מחשב קודם את הקבוע מתוך נתוני הניסוי, ורק אחר כך משתמש בו כדי להחזיר תאוטה 
-- במודל הריבועי הוספתי מהירות סופית קטנה (cutoff) כדי לאפשר עצירה סופית,  
-  אחרת לפי המשוואה התאורטית הקליע לא נעצר אף פעם.  
-- הצגתי כל מודל בגרף נפרד, כי סדרי הגודל שונים מאוד בין המודלים  
-  ואם כולם היו מוצגים באותו גרף, עקומה אחת הייתה מסתירה את השנייה.  
-
-</div>
+## ▶️ How to run
+Open the notebook and run all cells:
+1. Clone the repo
+```bash
+git clone https://github.com/Yamit-Moreno/Bullet-models-project.git
+cd Bullet-models-project
